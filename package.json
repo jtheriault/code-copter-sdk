@@ -29,6 +29,7 @@
   "devDependencies": {
     "istanbul": "^0.4.3",
     "jasmine": "^2.4.1",
-    "nodemon": "^1.9.1"
+    "nodemon": "^1.9.1",
+    "proxyquire": "^1.7.4"
   }
 }
