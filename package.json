@@ -9,6 +9,12 @@
     "posttest": "istanbul check-coverage",
     "watch:test": "nodemon -w src -x npm test"
   },
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "jasmine": "^2.4.1",
+    "nodemon": "^1.9.1",
+    "proxyquire": "^1.7.4"
+  },
   "author": "Joe Theriault <joseph@yankoismedia.com> (http://www.josephtheriault.com)",
   "bugs": {
     "url": "https://github.com/jtheriault/code-copter-sdk/issues"
@@ -24,12 +30,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/jtheriault/code-copter-sdk.git"
-  },
-  "devDependencies": {
-    "istanbul": "^0.4.3",
-    "jasmine": "^2.4.1",
-    "nodemon": "^1.9.1",
-    "proxyquire": "^1.7.4"
+    "url": "git@github.com/jtheriault/code-copter-sdk.git"
   }
 }
