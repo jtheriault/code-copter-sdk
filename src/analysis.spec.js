@@ -8,6 +8,7 @@ describe('Analysis', function describeAnalysis () {
         analysis = new Analysis();
 
         validErrorParameters = {
+            line: 1,
             message: 'Epsilon Rho Rho'
         };
     });
@@ -35,6 +36,14 @@ describe('Analysis', function describeAnalysis () {
         it('should require parameters', function addError () {
             expect(function addInvalidError () {
                 analysis.addError();
+            }).toThrow();
+        });
+
+        it('should require a line number', function addError () {
+            delete validErrorParameters.line;
+
+            expect(function addInvalidError () {
+                analysis.addError(validErrorParameters);
             }).toThrow();
         });
 

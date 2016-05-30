@@ -60,6 +60,7 @@ describe('Report', function describeReport () {
 
         testFailedAnalysis = new Analysis();
         testFailedAnalysis.addError({
+            line: 0,
             message: 'YOU SHALL NOT PASS!'
         });
 
