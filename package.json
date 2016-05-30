@@ -9,6 +9,7 @@
     "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'", 
     "prepublish": "npm shrinkwrap",
     "preshrinkwrap": "rm -f npm-shrinkwrap.json",
+    "preversion": "npm test",
     "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
     "posttest": "istanbul check-coverage",
     "postversion": "npm publish",
