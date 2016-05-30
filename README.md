@@ -1,6 +1,11 @@
 # Code-Copter SDK
 
-## API Reference
+[![Build Status](https://travis-ci.org/jtheriault/code-copter-sdk.svg)](https://travis-ci.org/jtheriault/code-copter-sdk)
+
+## Summary
+Classes to help in the development of plugins for code-copter.
+
+## Reference
 ## Classes
 
 <dl>
