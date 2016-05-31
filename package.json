@@ -10,12 +10,13 @@
     "prepublish": "(in-publish && npm shrinkwrap) || (! in-publish && echo 'Skipping prepublish step')",
     "preshrinkwrap": "rm -f npm-shrinkwrap.json",
     "preversion": "npm test",
-    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
     "posttest": "istanbul check-coverage",
     "postversion": "npm publish",
+    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
     "watch:test": "nodemon -w src -x npm test"
   },
   "devDependencies": {
+    "in-publish": "^2.0.0",
     "istanbul": "^0.4.3",
     "jasmine": "^2.4.1",
     "nodemon": "^1.9.1",
