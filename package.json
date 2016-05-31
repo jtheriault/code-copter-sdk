@@ -1,13 +1,13 @@
 {
   "name": "code-copter-sdk",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Classes to help in the development of plugins for code-copter v2",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rm -r coverage/ node_modules",
+    "clean": "rm -rf coverage/ node_modules npm-shrinkwrap.json",
     "docs": "jsdoc2md src/*.js --template src/README.hbs > README.md",
-    "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'", 
-    "prepublish": "npm shrinkwrap",
+    "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'",
+    "prepublish": "(in-publish && npm shrinkwrap) || (! in-publish && echo 'Skipping prepublish step')",
     "preshrinkwrap": "rm -f npm-shrinkwrap.json",
     "preversion": "npm test",
     "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
